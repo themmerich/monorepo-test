@@ -1,0 +1,39 @@
+<div class="mfe1-layout">
+  <aside class="sidebar">
+    <nav>
+      <ul class="menu">
+        <li>
+          <a routerLink="provisionen" routerLinkActive="is-active" class="menu-item">Provisionen</a>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="menu-item menu-item--group"
+            [class.is-open]="definitionenOpen()"
+            (click)="toggleDefinitionen()"
+            [attr.aria-expanded]="definitionenOpen()"
+          >
+            <span>Definitionen</span>
+            <span class="caret" aria-hidden="true">{{ definitionenOpen() ? '▾' : '▸' }}</span>
+          </button>
+          @if (definitionenOpen()) {
+            <ul class="submenu">
+              <li>
+                <a routerLink="provisionsbezeichnungen" routerLinkActive="is-active" class="menu-item menu-item--child">Provisionsbezeichnungen</a>
+              </li>
+              <li>
+                <a routerLink="gebuehren" routerLinkActive="is-active" class="menu-item menu-item--child">Gebühren</a>
+              </li>
+              <li>
+                <a routerLink="provisionstypen" routerLinkActive="is-active" class="menu-item menu-item--child">Provisionstypen</a>
+              </li>
+            </ul>
+          }
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <section class="content">
+    <router-outlet />
+  </section>
+</div>

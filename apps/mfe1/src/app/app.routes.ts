@@ -1,6 +1,3 @@
-import { Route } from '@angular/router';
-import { TestPage } from './test-page/test-page';
+import { MFE1_ROUTES } from './mfe1.routes';
 
-export const appRoutes: Route[] = [
-  { path: '', component: TestPage },
-];
+export const appRoutes = MFE1_ROUTES;
