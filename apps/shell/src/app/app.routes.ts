@@ -6,8 +6,8 @@ export const appRoutes: Route[] = [
   { path: '', component: Home, pathMatch: 'full' },
   {
     path: 'mfe1',
-    loadComponent: () =>
-      loadRemoteModule('mfe1', './Component').then((m) => m.TestPage),
+    loadChildren: () =>
+      loadRemoteModule('mfe1', './routes').then((m) => m.MFE1_ROUTES),
   },
   {
     path: 'mfe2',
