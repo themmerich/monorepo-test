@@ -1,0 +1,11 @@
+<nav class="topbar">
+  <div class="topbar__brand">monorepo-test</div>
+  <ul class="topbar__links">
+    <li><a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+    <li><a routerLink="/mfe1" routerLinkActive="is-active">MFE1</a></li>
+    <li><a routerLink="/mfe2" routerLinkActive="is-active">MFE2</a></li>
+  </ul>
+</nav>
+<main class="shell-main">
+  <router-outlet></router-outlet>
+</main>

@@ -2,18 +2,32 @@
   "name": "@monorepo-test/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run-many -t serve --projects=shell,mfe1,mfe2 --parallel=3",
+    "start:shell": "nx run shell:serve",
+    "start:mfe1": "nx run mfe1:serve",
+    "start:mfe2": "nx run mfe2:serve",
+    "build": "nx run-many -t build --projects=shell,mfe1,mfe2",
+    "build:shell": "nx run shell:build",
+    "build:mfe1": "nx run mfe1:build",
+    "build:mfe2": "nx run mfe2:build"
+  },
   "private": true,
   "dependencies": {
+    "@angular-architects/native-federation": "^21.2.3",
+    "@angular/animations": "~21.2.0",
     "@angular/common": "~21.2.0",
     "@angular/compiler": "~21.2.0",
     "@angular/core": "~21.2.0",
     "@angular/forms": "~21.2.0",
     "@angular/platform-browser": "~21.2.0",
     "@angular/router": "~21.2.0",
+    "@softarc/native-federation-node": "^3.3.4",
+    "es-module-shims": "^1.5.12",
     "rxjs": "~7.8.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~21.2.0",
     "@angular-devkit/core": "~21.2.0",
     "@angular-devkit/schematics": "~21.2.0",
     "@angular/build": "~21.2.0",
