@@ -1,0 +1,19 @@
+{
+  "generators": {
+    "feature": {
+      "factory": "./src/generators/feature/generator",
+      "schema": "./src/generators/feature/schema.json",
+      "description": "feature generator"
+    },
+    "domain": {
+      "factory": "./src/generators/domain/generator",
+      "schema": "./src/generators/domain/schema.json",
+      "description": "domain generator"
+    },
+    "mfe": {
+      "factory": "./src/generators/mfe/generator",
+      "schema": "./src/generators/mfe/schema.json",
+      "description": "mfe generator"
+    }
+  }
+}

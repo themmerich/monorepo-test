@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "Mfe",
+  "title": "Create a new MFE app with native-federation and wire it into the shell",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "App name in kebab-case (e.g. 'crm')",
+      "$default": { "$source": "argv", "index": 0 },
+      "x-prompt": "MFE app name?"
+    },
+    "port": {
+      "type": "number",
+      "description": "Dev-server port for this MFE",
+      "x-prompt": "Dev-server port (e.g. 4203)?"
+    },
+    "label": {
+      "type": "string",
+      "description": "Label shown in the shell's topbar (defaults to PascalCased name)"
+    }
+  },
+  "required": ["name", "port"]
+}

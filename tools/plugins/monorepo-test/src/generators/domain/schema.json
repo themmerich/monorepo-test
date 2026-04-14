@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "Domain",
+  "title": "Create a new DDD domain with shell, first feature, data-access, ui, model libs",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Domain name in kebab-case (singular, e.g. 'customer')",
+      "$default": { "$source": "argv", "index": 0 },
+      "x-prompt": "Domain name (e.g. 'customer')?"
+    },
+    "mfe": {
+      "type": "string",
+      "description": "Existing MFE app that owns this domain (e.g. 'cbs', 'wau')",
+      "x-prompt": "Which MFE owns this domain?"
+    },
+    "firstFeature": {
+      "type": "string",
+      "description": "Name of the initial feature-* lib to create",
+      "default": "overview"
+    }
+  },
+  "required": ["name", "mfe"]
+}

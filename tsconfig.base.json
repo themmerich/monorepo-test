@@ -59,7 +59,8 @@
       ],
       "@monorepo-test/domain/auswertung/model": [
         "libs/domain/auswertung/model/src/index.ts"
-      ]
+      ],
+      "@monorepo-test/plugin": ["tools/plugins/monorepo-test/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
