@@ -14,7 +14,53 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@monorepo-test/domain/provision/shell": [
+        "libs/domain/provision/shell/src/index.ts"
+      ],
+      "@monorepo-test/domain/provision/feature-search": [
+        "libs/domain/provision/feature-search/src/index.ts"
+      ],
+      "@monorepo-test/domain/provision/feature-detail": [
+        "libs/domain/provision/feature-detail/src/index.ts"
+      ],
+      "@monorepo-test/domain/provision/feature-edit": [
+        "libs/domain/provision/feature-edit/src/index.ts"
+      ],
+      "@monorepo-test/domain/provision/feature-provisionsbezeichnungen": [
+        "libs/domain/provision/feature-provisionsbezeichnungen/src/index.ts"
+      ],
+      "@monorepo-test/domain/provision/feature-gebuehren": [
+        "libs/domain/provision/feature-gebuehren/src/index.ts"
+      ],
+      "@monorepo-test/domain/provision/feature-provisionstypen": [
+        "libs/domain/provision/feature-provisionstypen/src/index.ts"
+      ],
+      "@monorepo-test/domain/provision/data-access": [
+        "libs/domain/provision/data-access/src/index.ts"
+      ],
+      "@monorepo-test/domain/provision/ui": [
+        "libs/domain/provision/ui/src/index.ts"
+      ],
+      "@monorepo-test/domain/provision/model": [
+        "libs/domain/provision/model/src/index.ts"
+      ],
+      "@monorepo-test/domain/auswertung/shell": [
+        "libs/domain/auswertung/shell/src/index.ts"
+      ],
+      "@monorepo-test/domain/auswertung/feature-uebersicht": [
+        "libs/domain/auswertung/feature-uebersicht/src/index.ts"
+      ],
+      "@monorepo-test/domain/auswertung/data-access": [
+        "libs/domain/auswertung/data-access/src/index.ts"
+      ],
+      "@monorepo-test/domain/auswertung/ui": [
+        "libs/domain/auswertung/ui/src/index.ts"
+      ],
+      "@monorepo-test/domain/auswertung/model": [
+        "libs/domain/auswertung/model/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

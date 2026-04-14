@@ -10,12 +10,11 @@ describe('App', () => {
     }).compileComponents();
   });
 
-  it('renders the shell topbar brand', async () => {
+  it('renders the topbar with the brand logo', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.topbar__brand')?.textContent).toContain(
-      'monorepo-test',
-    );
+    expect(compiled.querySelector('.topbar__brand')).toBeTruthy();
+    expect(compiled.querySelector('.topbar__logo')).toBeTruthy();
   });
 });

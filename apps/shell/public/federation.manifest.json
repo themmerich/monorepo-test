@@ -1,4 +1,4 @@
 {
-  "mfe1": "http://localhost:4201/remoteEntry.json",
-  "mfe2": "http://localhost:4202/remoteEntry.json"
+  "cbs": "http://localhost:4201/remoteEntry.json",
+  "wau": "http://localhost:4202/remoteEntry.json"
 }
