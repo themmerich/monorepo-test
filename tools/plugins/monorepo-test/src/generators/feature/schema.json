@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "Feature",
+  "title": "Add a feature-* lib to an existing domain",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Feature name in kebab-case (no 'feature-' prefix)",
+      "$default": { "$source": "argv", "index": 0 },
+      "x-prompt": "Feature name (e.g. 'search', 'edit', 'customer-overview')?"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Existing domain the feature belongs to (e.g. 'provision', 'auswertung')",
+      "x-prompt": "Which domain does this feature belong to?"
+    }
+  },
+  "required": ["name", "domain"]
+}

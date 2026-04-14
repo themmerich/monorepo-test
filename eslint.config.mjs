@@ -75,7 +75,11 @@ export default [
             },
             {
               sourceTag: 'type:data-access',
-              onlyDependOnLibsWithTags: ['type:data-access', 'type:model', 'type:util'],
+              onlyDependOnLibsWithTags: [
+                'type:data-access',
+                'type:model',
+                'type:util',
+              ],
             },
             {
               sourceTag: 'type:model',
@@ -103,5 +107,13 @@ export default [
     ],
     // Override or add rules here
     rules: {},
+  },
+  {
+    files: ['**/*.json'],
+    // Override or add rules here
+    rules: {},
+    languageOptions: {
+      parser: await import('jsonc-eslint-parser'),
+    },
   },
 ];

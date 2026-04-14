@@ -3,7 +3,14 @@
     <img src="Atruvia_logo.svg" alt="Atruvia" class="topbar__logo" />
   </a>
   <ul class="topbar__links">
-    <li><a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+    <li>
+      <a
+        routerLink="/"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+    </li>
     <li><a routerLink="/cbs" routerLinkActive="is-active">Datenhaltung</a></li>
     <li><a routerLink="/wau" routerLinkActive="is-active">Auswertungen</a></li>
   </ul>
