@@ -1,0 +1,20 @@
+{
+  "name": "domain-provision-feature-edit",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/domain/provision/feature-edit/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": ["scope:provision", "mfe:cbs", "type:feature"],
+  "targets": {
+    "test": {
+      "executor": "@nx/vitest:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "reportsDirectory": "coverage/libs/domain/provision/feature-edit"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

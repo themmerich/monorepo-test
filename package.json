@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run-many -t serve --projects=shell,mfe1,mfe2 --parallel=3",
+    "start": "nx run-many -t serve --projects=shell,cbs,wau --parallel=3",
     "start:shell": "nx run shell:serve",
-    "start:mfe1": "nx run mfe1:serve",
-    "start:mfe2": "nx run mfe2:serve",
-    "build": "nx run-many -t build --projects=shell,mfe1,mfe2",
+    "start:cbs": "nx run cbs:serve",
+    "start:wau": "nx run wau:serve",
+    "build": "nx run-many -t build --projects=shell,cbs,wau",
     "build:shell": "nx run shell:build",
-    "build:mfe1": "nx run mfe1:build",
-    "build:mfe2": "nx run mfe2:build"
+    "build:cbs": "nx run cbs:build",
+    "build:wau": "nx run wau:build"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +27,8 @@
     "rxjs": "~7.8.0"
   },
   "devDependencies": {
+    "@analogjs/vite-plugin-angular": "~2.1.2",
+    "@analogjs/vitest-angular": "~2.1.2",
     "@angular-devkit/build-angular": "~21.2.0",
     "@angular-devkit/core": "~21.2.0",
     "@angular-devkit/schematics": "~21.2.0",
@@ -41,6 +43,8 @@
     "@nx/eslint-plugin": "22.6.5",
     "@nx/js": "22.6.5",
     "@nx/playwright": "22.6.5",
+    "@nx/vite": "22.6.5",
+    "@nx/vitest": "22.6.5",
     "@nx/web": "22.6.5",
     "@nx/workspace": "22.6.5",
     "@oxc-project/runtime": "^0.115.0",
@@ -49,7 +53,10 @@
     "@swc-node/register": "~1.11.1",
     "@swc/core": "~1.15.5",
     "@swc/helpers": "~0.5.18",
+    "@types/node": "20.19.9",
     "@typescript-eslint/utils": "^8.40.0",
+    "@vitest/coverage-v8": "~4.1.0",
+    "@vitest/ui": "~4.1.0",
     "angular-eslint": "^21.2.0",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
@@ -60,6 +67,7 @@
     "tslib": "^2.3.0",
     "typescript": "~5.9.2",
     "typescript-eslint": "^8.40.0",
+    "vite": "^8.0.0",
     "vitest": "^4.0.8"
   }
 }

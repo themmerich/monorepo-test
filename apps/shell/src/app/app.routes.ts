@@ -5,13 +5,13 @@ import { Home } from './home/home';
 export const appRoutes: Route[] = [
   { path: '', component: Home, pathMatch: 'full' },
   {
-    path: 'mfe1',
+    path: 'cbs',
     loadChildren: () =>
-      loadRemoteModule('mfe1', './routes').then((m) => m.MFE1_ROUTES),
+      loadRemoteModule('cbs', './routes').then((m) => m.CBS_ROUTES),
   },
   {
-    path: 'mfe2',
-    loadComponent: () =>
-      loadRemoteModule('mfe2', './Component').then((m) => m.TestPage),
+    path: 'wau',
+    loadChildren: () =>
+      loadRemoteModule('wau', './routes').then((m) => m.WAU_ROUTES),
   },
 ];
